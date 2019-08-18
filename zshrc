@@ -9,14 +9,11 @@ alias wttr="curl 'wttr.in?format=3'"
 alias tmux="tmux -2"
 alias sml="rlwrap sml"
 alias pip="pip3"
-alias pdb="parse-dashboard --dev --appId fceplusplus --masterKey testing123 --serverURL \"https://fceplusplus.herokuapp.com/parse\""
 function cdl {
 	builtin cd "$@" && ls -F
 }
 alias cdd="cdl .."
-# function cdd {
-# 	builtin cd .. "$@" && ls -F
-# }
+alias cl="clear"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/samflattery/.oh-my-zsh"
