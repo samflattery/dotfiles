@@ -14,6 +14,7 @@ function cdl {
 }
 alias cdd="cdl .."
 alias cl="clear"
+alias tophistory="history | awk ‘{ $1=””; print $0 }’ | sort | uniq -c | sort -nr | head -20"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/samflattery/.oh-my-zsh"
