@@ -26,7 +26,7 @@ export ZSH="/Users/samflattery/.oh-my-zsh"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="agnoster"
 
-plugins=(git zsh-autosuggestions vi-mode)
+plugins=(git zsh-autosuggestions vi-mode z)
 # DEFAULT_USER=$(whoami)
 # DEFAULT_USER=$USER
 
