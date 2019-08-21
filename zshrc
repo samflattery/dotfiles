@@ -13,6 +13,9 @@ function cdl {
 	builtin cd "$@" && ls -F
 }
 alias cdd="cdl .."
+alias cddd="cdl ../.."
+alias cdddd="cdl ../../.."
+alias cddddd="cdl ../../../.."
 alias cl="clear"
 
 # Path to your oh-my-zsh installation.
