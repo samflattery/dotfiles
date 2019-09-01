@@ -17,7 +17,15 @@ alias cddd="cdl ../.."
 alias cdddd="cdl ../../.."
 alias cddddd="cdl ../../../.."
 alias cl="clear"
+alias vimrc="vim ~/dev/dotfiles/vimrc"
+alias zshrc="vim ~/dev/dotfiles/zshrc"
+alias mv="mv -v"
+alias cp="cp -v"
+alias rm="rm -v"
+# alias vim="/usr/local/Cellar/vim"
 
+#cd with just directory name
+setopt autocd 	
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/samflattery/.oh-my-zsh"
 
