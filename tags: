@@ -1,9 +1,16 @@
 !_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
 <C-Left>	/Users/samflattery/dev/dotfiles/vimrc	/^nnoremap <C-Left> :tabp<CR>$/;"	m	language:Vim
 <C-Right>	/Users/samflattery/dev/dotfiles/vimrc	/^nnoremap <C-Right> :tabn<CR>$/;"	m	language:Vim
+<Leader>b	/Users/samflattery/dev/dotfiles/vimrc	/^map <Leader>b <Plug>(easymotion-b)$/;"	m	language:Vim
 <leader>b	/Users/samflattery/dev/dotfiles/vimrc	/^nmap <silent> <leader>b :TagbarToggle<CR>$/;"	m	language:Vim
+<Leader>d	/Users/samflattery/dev/dotfiles/vimrc	/^map <Leader>d <Plug>(easymotion-s)$/;"	m	language:Vim
+<Leader>e	/Users/samflattery/dev/dotfiles/vimrc	/^map <Leader>e <Plug>(easymotion-e)$/;"	m	language:Vim
+<Leader>f	/Users/samflattery/dev/dotfiles/vimrc	/^map <Leader>f <Plug>(easymotion-f)$/;"	m	language:Vim
+<Leader>j	/Users/samflattery/dev/dotfiles/vimrc	/^map <Leader>j <Plug>(easymotion-j)$/;"	m	language:Vim
+<Leader>k	/Users/samflattery/dev/dotfiles/vimrc	/^map <Leader>k <Plug>(easymotion-k)$/;"	m	language:Vim
 <Leader>s	/Users/samflattery/dev/dotfiles/vimrc	/^nnoremap <Leader>s :SyntasticToggleMode<CR>$/;"	m	language:Vim
 <leader>t	/Users/samflattery/dev/dotfiles/vimrc	/^nmap <silent> <leader>t :NERDTreeTabsToggle<CR>$/;"	m	language:Vim
+<Leader>w	/Users/samflattery/dev/dotfiles/vimrc	/^map <Leader>w <Plug>(easymotion-w)$/;"	m	language:Vim
 airline#extensions#tmuxline#snapshot_file	/Users/samflattery/dev/dotfiles/vimrc	/^let airline#extensions#tmuxline#snapshot_file="~.tmux-status.conf"$/;"	v	language:Vim
 delimitMate_expand_cr	/Users/samflattery/dev/dotfiles/vimrc	/^let delimitMate_expand_cr = 1$/;"	v	language:Vim
 g:airline#extensions#hunks#non_zero_only	/Users/samflattery/dev/dotfiles/vimrc	/^let g:airline#extensions#hunks#non_zero_only=1$/;"	v	language:Vim
