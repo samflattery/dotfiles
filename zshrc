@@ -22,7 +22,6 @@ alias zshrc="vim ~/dev/dotfiles/zshrc"
 alias mv="mv -v"
 alias cp="cp -v"
 alias rm="rm -v"
-# alias vim="/usr/local/Cellar/vim"
 
 #cd with just directory name
 setopt autocd 	
