@@ -78,6 +78,7 @@ Plugin 'tpope/vim-commentary' "gc to comment out stuff in visual mode
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat' "use dot on surround commands
 Plugin 'junegunn/goyo.vim'
+Plugin 'easymotion/vim-easymotion'
 
 " --- Multiple Cursors ---
 " Ctrl + N to select
@@ -242,6 +243,15 @@ augroup vimbettersml
   let g:sml_greek_tyvar_show_tick = 1
 augroup END
 
+" --- easymotion ---
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>w <Plug>(easymotion-w)
+map <Leader>b <Plug>(easymotion-b)
+map <Leader>e <Plug>(easymotion-e)
+map <Leader>f <Plug>(easymotion-f)
+map <Leader>d <Plug>(easymotion-s)
+
+
 " --- Extras ---
 let g:strip_whitespace_on_save=1
-
