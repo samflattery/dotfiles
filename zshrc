@@ -26,7 +26,6 @@ alias rm="rm -v"
 #cd with just directory name
 setopt autocd 	
 # Path to your oh-my-zsh installation.
-# export ZSH="/afs/andrew.cmu.edu/usr22/sflatter/.oh-my-zsh"
 source ~/dotfiles/zshpath
 
 # Set name of the theme to load --- if set to "random", it will
