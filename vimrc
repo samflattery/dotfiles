@@ -108,6 +108,7 @@ set showcmd
 set incsearch
 set hlsearch " :nohls
 set clipboard=unnamed
+set colorcolumn=80
 
 "" syntax on
 set mouse=a

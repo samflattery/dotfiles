@@ -17,8 +17,8 @@ alias cddd="cdl ../.."
 alias cdddd="cdl ../../.."
 alias cddddd="cdl ../../../.."
 alias cl="clear"
-alias vimrc="vim ~/dev/dotfiles/vimrc"
-alias zshrc="vim ~/dev/dotfiles/zshrc"
+alias vimrc="vim ~/dotfiles/vimrc"
+alias zshrc="vim ~/dotfiles/zshrc"
 alias mv="mv -v"
 alias cp="cp -v"
 alias rm="rm -v"
@@ -27,7 +27,8 @@ alias rm="rm -v"
 #cd with just directory name
 setopt autocd 	
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/samflattery/.oh-my-zsh"
+# export ZSH="/afs/andrew.cmu.edu/usr22/sflatter/.oh-my-zsh"
+source ~/dotfiles/zshpath
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -37,7 +38,7 @@ export ZSH="/Users/samflattery/.oh-my-zsh"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="agnoster"
 
-plugins=(git zsh-autosuggestions vi-mode z)
+plugins=(git zsh-autosuggestions vi-mode z zsh-syntax-highlighting)
 # DEFAULT_USER=$(whoami)
 # DEFAULT_USER=$USER
 
@@ -127,8 +128,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
