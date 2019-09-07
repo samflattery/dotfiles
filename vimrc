@@ -55,6 +55,10 @@ Plugin 'tpope/vim-fugitive'
 
 " --- Other text editing features ---
 Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-commentary' "gc to comment out stuff in visual mode
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat' "use dot on surround commands
+Plugin 'easymotion/vim-easymotion'
 
 " --- Tmux ---
 " Navigate windows easily
@@ -72,13 +76,10 @@ Plugin 'benmills/vimux'
 Plugin 'jez/vim-better-sml'
 
 " --- Extras ---
-" Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'HTML-AutoCloseTag'
-Plugin 'tpope/vim-commentary' "gc to comment out stuff in visual mode
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat' "use dot on surround commands
 Plugin 'junegunn/goyo.vim'
-Plugin 'easymotion/vim-easymotion'
+Plugin 'terryma/vim-smooth-scroll'
 
 " --- Multiple Cursors ---
 " Ctrl + N to select
@@ -88,6 +89,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
+
 
 set t_Co=256
 syntax enable
@@ -252,6 +254,13 @@ map <Leader>e <Plug>(easymotion-e)
 map <Leader>f <Plug>(easymotion-f)
 map <Leader>d <Plug>(easymotion-s)
 
+" --- vim-smooth-scroll ---
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 20, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
 
 " --- Extras ---
 let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm=0
+let g:better_whitespace_enabled=0
