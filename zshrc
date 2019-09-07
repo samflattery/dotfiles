@@ -21,9 +21,11 @@ alias zshrc="vim ~/dotfiles/zshrc"
 alias mv="mv -v"
 alias cp="cp -v"
 alias rm="rm -v"
+alias cl="clear"
+alias clera="clear"
 
 #cd with just directory name
-setopt autocd 	
+setopt autocd
 # Path to your oh-my-zsh installation.
 source ~/dotfiles/zshpath
 
