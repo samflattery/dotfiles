@@ -1,3 +1,14 @@
+"
+"     ██▒   █▓ ██▓ ███▄ ▄███▓ ██▀███   ▄████▄
+"    ▓██░   █▒▓██▒▓██▒▀█▀ ██▒▓██ ▒ ██▒▒██▀ ▀█
+"     ▓██  █▒░▒██▒▓██    ▓██░▓██ ░▄█ ▒▒▓█    ▄
+"      ▒██ █░░░██░▒██    ▒██ ▒██▀▀█▄  ▒▓▓▄ ▄██▒
+"       ▒▀█░  ░██░▒██▒   ░██▒░██▓ ▒██▒▒ ▓███▀ ░
+"       ░ ▐░  ░▓  ░ ▒░   ░  ░░ ▒▓ ░▒▓░░ ░▒ ▒  ░
+"       ░ ░░   ▒ ░░  ░      ░  ░▒ ░ ▒░  ░  ▒
+"         ░░   ▒ ░░      ░     ░░   ░ ░
+"          ░   ░         ░      ░     ░ ░
+"         ░                           ░
 set nocompatible
 
 " --- Key Bindings ---
@@ -80,6 +91,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'HTML-AutoCloseTag'
 Plugin 'junegunn/goyo.vim'
 Plugin 'terryma/vim-smooth-scroll'
+Plugin 'ryanoasis/vim-devicons'
 
 " --- Multiple Cursors ---
 " Ctrl + N to select
@@ -93,6 +105,7 @@ call vundle#end()
 
 set t_Co=256
 syntax enable
+set encoding=UTF-8
 let g:solarized_termtrans=1
 let g:solarized_termcolors=16
 set background=dark
@@ -193,7 +206,7 @@ let g:easytags_suppress_ctags_warning = 1
 
 " ----- majutsushi/tagbar settings -----
 " Open/close tagbar with \b
-nmap <silent> <leader>b :TagbarToggle<CR>
+nmap <silent> <leader>a :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 
