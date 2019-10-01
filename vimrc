@@ -43,7 +43,7 @@ Plugin 'vim-syntastic/syntastic'
 " --- Easytags and tagbar ---
 "  generates tag fields
 "  compiled index of functions and variables
-"  open with \b
+"  open with \a
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
@@ -65,10 +65,20 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 
 " --- Other text editing features ---
-Plugin 'Raimondi/delimitMate'
-Plugin 'tpope/vim-commentary' "gc to comment out stuff in visual mode
+Plugin 'Raimondi/delimitMate' " auto closes parens, quotes, etc.
+Plugin 'tpope/vim-commentary' " gc to comment out stuff in visual mode
+
+" --- vim-surround ---
+" in visual mode, S + char -> surround the selected with the character
+" use cs<char><char'> to change surrounding of char to char'
+" use ysiw<char> to surround a word with a char
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat' "use dot on surround commands
+
+" --- easymotion ---
+" navigate text more easily using <leader><motion>
+" where command is either w, b, e, j, k, d, f
+" d is bidirectional find, f is one direction
 Plugin 'easymotion/vim-easymotion'
 
 " --- Tmux ---
@@ -76,7 +86,7 @@ Plugin 'easymotion/vim-easymotion'
 " < = C-h
 " v = C-j, etc...
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'edkolev/tmuxline.vim'
+Plugin 'edkolev/tmuxline.vim' " gives vim a nice tmux-like status bar
 
 " --- Syntax Plugins ---
 Plugin 'jez/vim-c0'
@@ -87,11 +97,12 @@ Plugin 'benmills/vimux'
 Plugin 'jez/vim-better-sml'
 
 " --- Extras ---
-Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'ntpeters/vim-better-whitespace' " trim whitespace on save
 Plugin 'HTML-AutoCloseTag'
+" use :Goyo to enable distraction-free, :Goyo! to disable
 Plugin 'junegunn/goyo.vim'
-Plugin 'terryma/vim-smooth-scroll'
-Plugin 'ryanoasis/vim-devicons'
+Plugin 'terryma/vim-smooth-scroll' " makes scrolling animated
+Plugin 'ryanoasis/vim-devicons' " adds icons to status bar and nerdtree
 
 " --- Multiple Cursors ---
 " Ctrl + N to select
@@ -101,7 +112,6 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
-
 
 set t_Co=256
 syntax enable
@@ -152,7 +162,6 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.maxlinenr=' ㏑'
-" let g:airline_symbols.linenr='㏑'
 
 " --- Tmuxline ---
 let g:tmuxline_preset={
@@ -167,7 +176,7 @@ let g:tmuxline_preset={
 
 let g:airline#extensions#tmuxline#enabled=0
 let g:tmuxline_theme='iceberg'
-let airline#extensions#tmuxline#snapshot_file="~.tmux-status.conf"
+let airline#extensions#tmuxline#snapshot_file="./.tmux-status.conf"
 
 " --- nerdtree ---
 " open and close with \t

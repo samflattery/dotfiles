@@ -28,6 +28,7 @@ alias clera="clear"
 setopt autocd
 # Path to your oh-my-zsh installation.
 source ~/dotfiles/zshpath
+source ~/.bash_profile
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
