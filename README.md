@@ -17,4 +17,4 @@ in it
 
 If the dotfiles folder is not in your home directory, you will need to change line 30 to the correct path
 
-Install the Menlo font from nerdFonts to get the powerline status icons and for icons in nerdTREE
+Install one of the fonts from NerdFonts (https://github.com/ryanoasis/nerd-fonts) to get powerline status bar icons and icons for the nerdTREE plugin.  The FiraCode font has cool ligatures.
