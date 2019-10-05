@@ -23,12 +23,14 @@ alias cp="cp -v"
 alias rm="rm -v"
 alias cl="clear"
 alias clera="clear"
+alias clearl="clear"
+alias clears="clear"
+alias sl="ls"
 
 #cd with just directory name
 setopt autocd
 # Path to your oh-my-zsh installation.
 source ~/dotfiles/zshpath
-source ~/.bash_profile
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -38,7 +40,7 @@ source ~/.bash_profile
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="agnoster"
 
-plugins=(git zsh-autosuggestions vi-mode z zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions z zsh-syntax-highlighting)
 # DEFAULT_USER=$(whoami)
 # DEFAULT_USER=$USER
 
@@ -102,6 +104,7 @@ plugins=(git zsh-autosuggestions vi-mode z zsh-syntax-highlighting)
 # Add wisely, as too many plugins slow down shell startup.
 
 source $ZSH/oh-my-zsh.sh
+alias l="ls"
 
 # User configuration
 
