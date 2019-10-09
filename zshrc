@@ -26,6 +26,8 @@ alias clera="clear"
 alias clearl="clear"
 alias clears="clear"
 alias sl="ls"
+alias andrew="ssh andrew"
+alias shark="ssh shark"
 
 #cd with just directory name
 setopt autocd
