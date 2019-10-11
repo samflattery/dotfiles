@@ -28,7 +28,7 @@ alias clearls="clear"
 alias sl="ls"
 alias l="ls"
 
-# git
+# git stuff
 alias ga="git add ."
 alias gca="git commit -a"
 alias gcm="git commit -m"
@@ -36,7 +36,6 @@ alias gcam="git commit -am"
 alias gs="git status"
 alias gd="git diff"
 
-# resuable format strings
 GIT_PRETTY_FORMAT="--pretty=\"%C(bold green)%h%Creset%C(auto)%d%Creset %s\""
 GIT_PRETTY_FORMAT_AUTHOR="--pretty=\"%C(bold green)%h%Creset %C(yellow)%an%Creset%C(auto)%d%Creset %s\""
 
@@ -53,6 +52,7 @@ alias glla='gla --all'
 alias andrew="ssh andrew"
 alias shark="ssh shark"
 alias buggy="ssh buggy"
+alias buggylocal="ssh buggylocal"
 
 # open programs
 alias ubuntu="open -a VMware\ Fusion"
@@ -67,5 +67,3 @@ alias tmux="tmux -2"
 alias sml="rlwrap sml"
 alias pip="pip3"
 alias duls="du -h -d1 | sort -hr"
-
-
