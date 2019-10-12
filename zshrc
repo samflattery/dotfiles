@@ -39,6 +39,9 @@ COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt pure
+export PATH="$PATH:$HOME/.vim/bundle/vim-superman/bin"
+compdef vman="man"
+
 
 # User configuration
 source ~/dotfiles/aliases.sh

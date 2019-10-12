@@ -103,6 +103,7 @@ Plugin 'HTML-AutoCloseTag'
 Plugin 'junegunn/goyo.vim'
 Plugin 'terryma/vim-smooth-scroll' " makes scrolling animated
 Plugin 'ryanoasis/vim-devicons' " adds icons to status bar and nerdtree
+Plugin 'jez/vim-superman' " view man pages in vim
 
 " --- Multiple Cursors ---
 " Ctrl + N to select
