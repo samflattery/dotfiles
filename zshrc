@@ -37,7 +37,7 @@ COMPLETION_WAITING_DOTS="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 source $ZSH/oh-my-zsh.sh
-if [[ -n "$SSH_CLIENT"] || [ -n "$SSH_TTY" ]]; then
+if [ -n "$SSH_CLIENT"] || [ -n "$SSH_TTY" ]; then
 	fpath+=("$HOME/dotfiles/pure")
 fi
 
