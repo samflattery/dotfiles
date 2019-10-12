@@ -6,7 +6,7 @@ export TERM="xterm-256color"
 #cd with just directory name
 setopt autocd
 # Path to your oh-my-zsh installation.
-source ~/dotfiles/zshpath
+export ZSH="$HOME/.oh-my-zsh"
 
 # ZSH_THEME="agnoster"
 ZSH_THEME=""

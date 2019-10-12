@@ -61,6 +61,8 @@ alias ch="open -a Google\ Chrome"
 alias prev="open -a Preview"
 alias finder="open -a Finder"
 alias twothirteen="open https://www.cs.cmu.edu/~213/schedule.html"
+alias babybuggyros="open https://github.com/AtlasBuggy/BabyBuggyROS"
+alias dunebuggyros="open https://github.com/AtlasBuggy/DuneBuggyROS"
 
 # random stuff
 alias wttr="curl 'wttr.in?format=3'"
