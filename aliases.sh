@@ -27,6 +27,7 @@ alias clears="clear"
 alias clearls="clear"
 alias sl="ls"
 alias l="ls"
+alias lsa="ls -a"
 
 # git stuff
 alias ga="git add ."

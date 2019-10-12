@@ -4,8 +4,6 @@
 # export TERM="screen-256color"
 export TERM="xterm-256color"
 
-# Aliases
-
 #cd with just directory name
 setopt autocd
 # Path to your oh-my-zsh installation.
@@ -17,7 +15,8 @@ source ~/dotfiles/zshpath
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+ZSH_THEME=""
 
 plugins=(git zsh-autosuggestions z zsh-syntax-highlighting)
 # DEFAULT_USER=$(whoami)
@@ -38,6 +37,8 @@ COMPLETION_WAITING_DOTS="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 source $ZSH/oh-my-zsh.sh
+autoload -U promptinit; promptinit
+prompt pure
 
 # User configuration
 source ~/dotfiles/aliases.sh
