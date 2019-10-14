@@ -57,7 +57,8 @@ alias buggylocal="ssh buggylocal"
 
 # open programs
 alias ubuntu="open -a VMware\ Fusion"
-alias ch="open -a Google\ Chrome"
+alias chrome="open -a Google\ Chrome"
+alias google="open -a Google\ Chrome"
 alias prev="open -a Preview"
 alias finder="open -a Finder"
 alias twothirteen="open https://www.cs.cmu.edu/~213/schedule.html"
