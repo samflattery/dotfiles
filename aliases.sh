@@ -28,6 +28,8 @@ alias clearls="clear"
 alias sl="ls"
 alias l="ls"
 alias lsa="ls -a"
+alias mkae="make"
+alias maek="make"
 
 # git stuff
 alias ga="git add ."

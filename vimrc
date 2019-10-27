@@ -215,8 +215,10 @@ let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
 
 " ----- majutsushi/tagbar settings -----
-" Open/close tagbar with \b
+" Open/close tagbar with \a
 nmap <silent> <leader>a :TagbarToggle<CR>
+autocmd FileType c,cpp nested :TagbarOpen " open tagbar automatically for C
+let g:tagbar_sort = 0
 " Uncomment to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 
