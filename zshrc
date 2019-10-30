@@ -32,7 +32,3 @@ source ~/dotfiles/aliases.sh
 
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="$PATH:/afs/club.cc.cmu.edu/contrib/bin"
-export MANPATH="$MANPATH:/afs/club.cc.cmu.edu/contrib/man"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/afs/club.cc.cmu.edu/contrib/lib"
-source /afs/club.cc.cmu.edu/contrib/etc/profile.d/bash_completion.sh
