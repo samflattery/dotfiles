@@ -289,3 +289,8 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
 let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm=0
 let g:better_whitespace_enabled=0
+
+" Read binary files with \hr
+nmap <Leader>hr :%!xxd<CR> :set filetype=xxd<CR>
+" Write binary files with \hw
+nmap <Leader>hw :%!xxd -r<CR> :set binary<CR> :set filetype=<CR>
