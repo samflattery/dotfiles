@@ -29,13 +29,18 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" --- Making Vim look good ----
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
+" --- Airline---
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" --- Vim as text editor ---
+" --- Colorschemes ---
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'rakr/vim-one'
+Plugin 'arcticicestudio/nord-vim'
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'drewtempelmeyer/palenight.vim'
+
+" --- Text Editor Features ---
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-syntastic/syntastic'
@@ -119,8 +124,8 @@ syntax enable
 set encoding=UTF-8
 let g:solarized_termtrans=1
 let g:solarized_termcolors=16
-set background=dark
 colorscheme solarized
+set background=dark
 
 filetype plugin indent on
 set tabstop=4
