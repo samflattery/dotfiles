@@ -16,6 +16,15 @@ set nocompatible
 nnoremap <C-Left> :tabp<CR>
 nnoremap <C-Right> :tabn<CR>
 
+" Make navigating wrapped lines the same as normal
+noremap <silent> k gk
+noremap <silent> j gj
+noremap <silent> gk k
+noremap <silent> gj j
+noremap <silent> ^ g^
+noremap <silent> g^ ^
+noremap <silent> _ g_
+
 " --- Make vim open where left off ---
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -141,12 +150,11 @@ set incsearch
 set hlsearch " :nohls
 set clipboard=unnamed
 set colorcolumn=80
-
-"" syntax on
 set mouse=a
 
 " For syntastic
 hi clear SignColumn
+
 
 " -------- Plugin-Specific Settings -----------
 

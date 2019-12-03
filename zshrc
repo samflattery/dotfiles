@@ -27,6 +27,9 @@ prompt pure
 export PATH="$PATH:$HOME/.vim/bundle/vim-superman/bin"
 compdef vman="man"
 
+# SMLNJ
+export PATH=/usr/local/smlnj/bin:"$PATH"
+
 # Aliases
 source ~/dotfiles/aliases.sh
 
