@@ -25,6 +25,9 @@ noremap <silent> ^ g^
 noremap <silent> g^ ^
 noremap <silent> _ g_
 
+" Change <space> from same as <l> to <leader>
+map <space> <leader>
+
 " --- Make vim open where left off ---
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -126,6 +129,8 @@ Plugin 'jez/vim-superman' " view man pages in vim
 " A inserts at end
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'vim/killersheep'
+
 call vundle#end()
 
 set t_Co=256
@@ -154,7 +159,6 @@ set mouse=a
 
 " For syntastic
 hi clear SignColumn
-
 
 " -------- Plugin-Specific Settings -----------
 

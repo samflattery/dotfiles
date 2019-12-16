@@ -1,4 +1,4 @@
-# aliases
+# cdl changes directory and ls's
 function cdl {
 	builtin cd "$@" && ls -F
 }
@@ -12,6 +12,7 @@ alias cddddd="cdl ../../../.."
 # easily access files
 alias vimrc="vim ~/dotfiles/vimrc"
 alias zshrc="vim ~/dotfiles/zshrc"
+alias tmuxconf="vim ~/dotfiles/tmux.conf"
 alias aliases="vim ~/dotfiles/aliases.sh"
 
 # verbose commands
@@ -30,6 +31,7 @@ alias l="ls"
 alias lsa="ls -a"
 alias mkae="make"
 alias maek="make"
+alias gpp="g++"
 
 # git stuff
 alias ga="git add ."
@@ -39,9 +41,9 @@ alias gcam="git commit -am"
 alias gs="git status"
 alias gd="git diff"
 
+# credits to github.com/jez for these
 GIT_PRETTY_FORMAT="--pretty=\"%C(bold green)%h%Creset%C(auto)%d%Creset %s\""
 GIT_PRETTY_FORMAT_AUTHOR="--pretty=\"%C(bold green)%h%Creset %C(yellow)%an%Creset%C(auto)%d%Creset %s\""
-
 # pretty Git log
 alias gl="git log --graph $GIT_PRETTY_FORMAT"
 # pretty Git log, all references
@@ -63,18 +65,25 @@ alias chrome="open -a Google\ Chrome"
 alias google="open -a Google\ Chrome"
 alias prev="open -a Preview"
 alias finder="open -a Finder"
-alias twothirteen="open https://www.cs.cmu.edu/~213/schedule.html"
 alias babybuggyros="open https://github.com/AtlasBuggy/BabyBuggyROS"
 alias dunebuggyros="open https://github.com/AtlasBuggy/DuneBuggyROS"
 
+# spotify stuff from osx plugin for zsh
+alias sp="spotify"
+alias spn="spotify next"
+alias spp="spotify play"
+alias sps="spotify status"
+alias sppp="spotify pause"
+
 # random stuff
-alias wttr="curl 'wttr.in?format=3'"
-alias tmux="tmux -2"
+alias wttr="curl 'wttr.in?format=3'" # get the current weather
+alias tmux="tmux -2" # for better colors
 alias sml="rlwrap sml"
 alias pip="pip3"
-alias duls="du -h -d1 | sort -hr"
+alias duls="du -h -d1 | sort -hr" # list disk usage for current folder
 alias :wq="exit"
 alias :q="exit"
 alias quit="exit"
 alias please="sudo"
 alias rick="curl -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
+

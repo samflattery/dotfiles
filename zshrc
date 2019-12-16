@@ -11,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="agnoster"
 ZSH_THEME=""
 
-plugins=(git zsh-autosuggestions z zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions z zsh-syntax-highlighting osx)
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
