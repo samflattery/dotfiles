@@ -36,12 +36,14 @@ endif
 
 filetype off
 
+" --- PLUGINS START ---
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" --- Airline---
+" --- Airline ---
+"  a status line for vim
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -53,8 +55,11 @@ Plugin 'ayu-theme/ayu-vim'
 Plugin 'drewtempelmeyer/palenight.vim'
 
 " --- Text Editor Features ---
+"  \t to open a file viewer
+"  \s to enable and disable syntax checking
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'ryanoasis/vim-devicons' " adds icons to status bar and nerdtree
 Plugin 'vim-syntastic/syntastic'
 
 " --- Easytags and tagbar ---
@@ -82,8 +87,14 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 
 " --- Other text editing features ---
-Plugin 'Raimondi/delimitMate' " auto closes parens, quotes, etc.
-Plugin 'tpope/vim-commentary' " gc to comment out stuff in visual mode
+"  auto close parens, quotes, etc.
+"  gc to comment out stuff in visual mode
+"  trim whitespace on save
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-commentary'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'HTML-AutoCloseTag'
+Plugin 'terryma/vim-smooth-scroll' " makes scrolling animated
 
 " --- vim-surround ---
 " in visual mode, S + char -> surround the selected with the character
@@ -113,14 +124,9 @@ Plugin 'justinmk/vim-syntax-extra'
 Plugin 'benmills/vimux'
 Plugin 'jez/vim-better-sml'
 
-" --- Extras ---
-Plugin 'ntpeters/vim-better-whitespace' " trim whitespace on save
-Plugin 'HTML-AutoCloseTag'
+" --- Goyo ---
 " use :Goyo to enable distraction-free, :Goyo! to disable
 Plugin 'junegunn/goyo.vim'
-Plugin 'terryma/vim-smooth-scroll' " makes scrolling animated
-Plugin 'ryanoasis/vim-devicons' " adds icons to status bar and nerdtree
-Plugin 'jez/vim-superman' " view man pages in vim
 
 " --- Multiple Cursors ---
 " Ctrl + N to select
@@ -129,10 +135,15 @@ Plugin 'jez/vim-superman' " view man pages in vim
 " A inserts at end
 Plugin 'terryma/vim-multiple-cursors'
 
-Plugin 'vim/killersheep'
+" --- Miscellaneous ---
+Plugin 'jez/vim-superman' " view man pages in vim
+Plugin 'vim/killersheep' " :KillKillKill starts a fun game
 
 call vundle#end()
 
+" --- PLUGINS END ---
+
+" --- Colorscheme Settings
 set t_Co=256
 syntax enable
 set encoding=UTF-8
@@ -141,9 +152,13 @@ let g:solarized_termcolors=16
 colorscheme solarized
 set background=dark
 
+" --- Indent Settings ---
 filetype plugin indent on
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
+set noexpandtab
+autocmd Filetype sml setlocal expandtab
 
 " --- General Settings ---
 set backspace=indent,eol,start
@@ -152,7 +167,7 @@ set noshowmode
 set number
 set showcmd
 set incsearch
-set hlsearch " :nohls
+set hlsearch " :nohl to un-highlight
 set clipboard=unnamed
 set colorcolumn=80
 set mouse=a
@@ -162,7 +177,7 @@ hi clear SignColumn
 
 " -------- Plugin-Specific Settings -----------
 
-" --- bling/vim-airline settings ---
+" --- Vim-Airline ---
 " Always show status bar
 set laststatus=2
 
@@ -171,17 +186,20 @@ let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='solarized'
 
+" turn off some sections I don't like
 let g:airline_section_b=''
 let g:airline_section_y=''
 let g:airline_section_error=''
 let g:airline_section_warning=''
 
+" change the current line symbol
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.maxlinenr=' ㏑'
 
 " --- Tmuxline ---
+"  customize how the tmuxline bar looks
 let g:tmuxline_preset={
 	\'a' : '#S',
 	\'b' : '#W',
@@ -196,7 +214,7 @@ let g:airline#extensions#tmuxline#enabled=0
 let g:tmuxline_theme='iceberg'
 let airline#extensions#tmuxline#snapshot_file="./.tmux-status.conf"
 
-" --- nerdtree ---
+" --- Nerdtree ---
 " open and close with \t
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 " let g:nerdtree_tabs_open_on_console_startup=1
@@ -218,10 +236,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-" press \S to not automatically check for errors
+" press \s to not automatically check for errors
 nnoremap <Leader>s :SyntasticToggleMode<CR>
 
-" --- xolox/easy tags ---
+" --- EasyTags ---
 " where to look for tags files
 set tags=./tags:,~/.vimtags
 " defaults
@@ -231,19 +249,21 @@ let g:easytags_dynamic_files = 2
 let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
 
-" ----- majutsushi/tagbar settings -----
+" --- Tagbar ---
 " Open/close tagbar with \a
 nmap <silent> <leader>a :TagbarToggle<CR>
 autocmd FileType c,cpp nested :TagbarOpen " open tagbar automatically for C
+
+" don't sort the tagbar by name, but by location in file
 let g:tagbar_sort = 0
 " Uncomment to open tagbar automatically whenever possible
-"autocmd BufEnter * nested :call tagbar#autoopen(0)
+" autocmd BufEnter * nested :call tagbar#autoopen(0)
 
-" --- Git Settings ---
+" --- Git ---
 " only display of diff is non-zero
 let g:airline#extensions#hunks#non_zero_only=1
 
-" --- DelimitMate Settings ---
+" --- DelimitMate ---
 let delimitMate_expand_cr = 1
 augroup mydelimitMate
   au!
@@ -253,11 +273,9 @@ augroup mydelimitMate
   au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
 
-" --- vim-better-sml Settings ---
+" --- vim-better-sml ---
 augroup vimbettersml
   au!
-
-  " ----- Keybindings -----
 
   au FileType sml nnoremap <silent> <buffer> <leader>y :SMLTypeQuery<CR>
   au FileType sml nnoremap <silent> <buffer> gd :SMLJumpToDef<CR>
@@ -277,9 +295,6 @@ augroup vimbettersml
   " set the print depth to 100
   au FileType sml nnoremap <silent> <buffer> <leader>ip :SMLReplPrintDepth<CR>
 
-  " ----- Other settings -----
-
-  " Uncomment to try out conceal characters
   " For some reason only works when conceallevel set globally
   au FileType sml setlocal conceallevel=2
   set conceallevel=2
@@ -302,11 +317,12 @@ noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 20, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
 
-" --- Extras ---
+" --- vim-better-whitespace ---
 let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm=0
 let g:better_whitespace_enabled=0
 
+" --- Extras ---
 " Read binary files with \hr
 nmap <Leader>hr :%!xxd<CR> :set filetype=xxd<CR>
 " Write binary files with \hw
