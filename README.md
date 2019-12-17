@@ -16,7 +16,3 @@ Similarly, replace your `~/.zshrc`, `~/.tmux.conf` and `~/.tmux-status.conf` wit
 Install one of the fonts from [NerdFonts](https://github.com/ryanoasis/nerd-fonts) to get powerline status bar icons and icons for the nerdTREE plugin.  The FiraCode font has cool ligatures.
 
 I use the [Pure Prompt](https://github.com/sindresorhus/pure) for oh-my-zsh.
-
-## highlights
-
-Coming soon
