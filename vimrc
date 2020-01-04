@@ -224,7 +224,7 @@ let g:syntastic_error_symbol='✘'
 let g:syntastic_warning_symbol='▲'
 augroup mySyntastic
   au!
-  au FileType tex let b:syntastic_mode''passive'
+  au FileType tex let b:syntastic_mode='passive'
 augroup end
 
 set statusline+=%#warningmsg#
@@ -298,6 +298,7 @@ augroup vimbettersml
   " For some reason only works when conceallevel set globally
   au FileType sml setlocal conceallevel=2
   set conceallevel=2
+  au FileType tex setlocal conceallevel=0 " turn it off for latex documents
   " Uncomment to try out same-width conceal characters
   let g:sml_greek_tyvar_show_tick = 1
 augroup END
