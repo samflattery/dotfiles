@@ -76,6 +76,7 @@ alias sps="spotify status"
 alias sppp="spotify pause"
 
 # random stuff
+alias time='gtime -f "%U user, %S system, %e real, %MkB mem -- %C"'
 alias wttr="curl 'wttr.in?format=3'" # get the current weather
 alias tmux="tmux -2" # for better colors
 alias sml="rlwrap sml"

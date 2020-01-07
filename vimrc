@@ -231,6 +231,11 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_cpp_compiler = 'g++-9'
+let g:syntastic_cpp_compiler_options = ' -std=c++17'
+
+au BufRead,BufNewFile *.json set filetype=json
+
 " close location list with :lclose
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
