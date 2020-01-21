@@ -87,6 +87,9 @@ alias :q="exit"
 alias quit="exit"
 alias please="sudo"
 alias rick="curl -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
+alias m="mac"
+alias python="python3" # rip
+alias find="mdfind"
 
 # remove auto generated files
 alias rmswp='rm .*.swp'
