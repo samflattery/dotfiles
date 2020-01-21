@@ -9,7 +9,6 @@ setopt autocd
 export ZSH="$HOME/.oh-my-zsh"
 
 # ZSH_THEME="agnoster"
-ZSH_THEME=""
 
 plugins=(git zsh-autosuggestions z zsh-syntax-highlighting osx)
 
