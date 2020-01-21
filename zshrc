@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-#
+
 export TERM="xterm-256color"
 
 #cd with just directory name
@@ -17,6 +17,9 @@ plugins=(git zsh-autosuggestions z zsh-syntax-highlighting osx)
 DISABLE_AUTO_UPDATE="true"
 
 source $ZSH/oh-my-zsh.sh
+
+# Source shell scripts
+export PATH="$PATH:$HOME/dotfiles/scripts"
 
 # Setup pure prompt
 fpath+=("$HOME/dotfiles/pure")

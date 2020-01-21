@@ -224,12 +224,17 @@ let g:syntastic_error_symbol='✘'
 let g:syntastic_warning_symbol='▲'
 augroup mySyntastic
   au!
-  au FileType tex let b:syntastic_mode''passive'
+  au FileType tex let b:syntastic_mode='passive'
 augroup end
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+let g:syntastic_cpp_compiler = 'g++-9'
+let g:syntastic_cpp_compiler_options = ' -std=c++17'
+
+au BufRead,BufNewFile *.json set filetype=json
 
 " close location list with :lclose
 let g:syntastic_always_populate_loc_list = 1
@@ -298,6 +303,7 @@ augroup vimbettersml
   " For some reason only works when conceallevel set globally
   au FileType sml setlocal conceallevel=2
   set conceallevel=2
+  au FileType tex setlocal conceallevel=0 " turn it off for latex documents
   " Uncomment to try out same-width conceal characters
   let g:sml_greek_tyvar_show_tick = 1
   let g:sml_auto_create_def_use = 'never'
