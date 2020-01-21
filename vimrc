@@ -300,6 +300,7 @@ augroup vimbettersml
   set conceallevel=2
   " Uncomment to try out same-width conceal characters
   let g:sml_greek_tyvar_show_tick = 1
+  let g:sml_auto_create_def_use = 'never'
 augroup END
 
 " --- easymotion ---

@@ -25,6 +25,8 @@ prompt pure
 
 # Tab completion for vman
 export PATH="$PATH:$HOME/.vim/bundle/vim-superman/bin"
+export PATH="$HOME/bin/mlton-install/bin:$PATH"
+export PATH="$HOME/test/mlton-install/bin:$PATH"
 compdef vman="man"
 
 # SMLNJ
