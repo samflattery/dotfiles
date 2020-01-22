@@ -171,6 +171,8 @@ set hlsearch " :nohl to un-highlight
 set clipboard=unnamed
 set colorcolumn=80
 set mouse=a
+set splitright
+set splitbelow
 
 " For syntastic
 hi clear SignColumn
