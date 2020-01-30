@@ -21,13 +21,21 @@ alias cp="cp -v"
 alias rm="rm -v"
 
 # misspellings
+# i have a problem with typing clear ls after every command
 alias cl="clear"
 alias clera="clear"
 alias clearl="clear"
 alias clears="clear"
+alias claer="clear"
+alias claer="clear"
 alias clearls="clear"
+alias clea="clear"
+alias cear="clear"
+alias cearl="clear"
 alias sl="ls"
+alias rls="ls"
 alias l="ls"
+alias s="ls"
 alias lsa="ls -a"
 alias mkae="make"
 alias maek="make"
@@ -58,6 +66,8 @@ alias andrew="ssh andrew"
 alias shark="ssh shark"
 alias buggy="ssh buggy"
 alias buggylocal="ssh buggylocal"
+alias atlas="ssh buggy"
+alias atlaslocal="ssh buggylocal"
 
 # open programs
 alias ubuntu="open -a VMware\ Fusion"
@@ -76,7 +86,6 @@ alias sps="spotify status"
 alias sppp="spotify pause"
 
 # random stuff
-alias time='gtime -f "%U user, %S system, %e real, %MkB mem -- %C"'
 alias wttr="curl 'wttr.in?format=3'" # get the current weather
 alias tmux="tmux -2" # for better colors
 alias sml="rlwrap sml"
@@ -89,7 +98,12 @@ alias please="sudo"
 alias rick="curl -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias m="mac"
 alias python="python3" # rip
-alias find="mdfind"
+
+if [[ "$(uname)" == "Darwin" ]]; then
+	alias find="mdfind" # better find for mac
+	alias time='gtime -f "%U user, %S system, %e real, %MkB mem -- %C"'
+	alias decomp='~/dev/binaries/retdec/bin/retdec-decompiler.py'
+fi
 
 # remove auto generated files
 alias rmswp='rm .*.swp'
