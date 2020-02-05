@@ -102,7 +102,7 @@ alias python="python3" # rip
 if [[ "$(uname)" == "Darwin" ]]; then
 	alias find="mdfind" # better find for mac
 	alias time='gtime -f "%U user, %S system, %e real, %MkB mem -- %C"'
-	alias decomp='~/dev/binaries/retdec/bin/retdec-decompiler.py'
+	alias decomp='~/dev/util/retdec/bin/retdec-decompiler.py'
 fi
 
 # remove auto generated files

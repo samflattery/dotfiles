@@ -16,6 +16,7 @@ plugins=(git zsh-autosuggestions z zsh-syntax-highlighting osx)
 DISABLE_AUTO_UPDATE="true"
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/dotfiles/keybindings.zsh
 
 # Source shell scripts
 export PATH="$PATH:$HOME/dotfiles/scripts"

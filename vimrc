@@ -159,6 +159,7 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 autocmd Filetype sml setlocal expandtab
+autocmd Filetype why3 setlocal expandtab
 
 " --- General Settings ---
 set backspace=indent,eol,start
