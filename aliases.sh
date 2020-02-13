@@ -89,7 +89,6 @@ alias sppp="spotify pause"
 alias wttr="curl 'wttr.in?format=3'" # get the current weather
 alias tmux="tmux -2" # for better colors
 alias sml="rlwrap sml"
-alias pip="pip3"
 alias duls="du -h -d1 | sort -hr" # list disk usage for current folder
 alias :wq="exit"
 alias :q="exit"
@@ -97,7 +96,8 @@ alias quit="exit"
 alias please="sudo"
 alias rick="curl -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias m="mac"
-alias python="python3" # rip
+alias path="echo $PATH | tr -s ':' '\n'" # pretty print path
+alias soz="source ~/.zshrc"
 
 if [[ "$(uname)" == "Darwin" ]]; then
 	alias find="mdfind" # better find for mac

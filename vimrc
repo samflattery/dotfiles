@@ -12,7 +12,29 @@
 set nocompatible
 
 " --- Key Bindings ---
-"  Ctrl + arrow to navigate tabs
+
+" Recognize dollar signs in LaTeX
+:onoremap <silent> i$ :<c-u>normal! T$vt$<cr>
+:vnoremap i$ T$ot$
+
+"Use enter to create new lines w/o entering insert mode
+nnoremap <CR> o<Esc>
+"Below is to fix issues with the ABOVE mappings in quickfix window
+autocmd CmdwinEnter * nnoremap <CR> <CR>
+autocmd BufReadPost quickfix nnoremap <CR> <CR>
+
+" Use tab to jump between blocks, because it's easier
+nnoremap <tab> %
+vnoremap <tab> %
+
+" Add comma/semi colon with leader ;
+nmap <silent> <Leader>; <Plug>(cosco-commaOrSemiColon)
+imap <silent> <Leader>; <c-o><Plug>(cosco-commaOrSemiColon)
+
+" Make double<Esc> clear search highlights
+nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+
+" Ctrl + arrow to navigate tabs
 nnoremap <C-Left> :tabp<CR>
 nnoremap <C-Right> :tabn<CR>
 
@@ -28,7 +50,7 @@ noremap <silent> _ g_
 " Change <space> from same as <l> to <leader>
 map <space> <leader>
 
-" --- Make vim open where left off ---
+" Make vim open where left off
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
   \| exe "normal! g'\"" | endif
@@ -138,6 +160,7 @@ Plugin 'terryma/vim-multiple-cursors'
 " --- Miscellaneous ---
 Plugin 'jez/vim-superman' " view man pages in vim
 Plugin 'vim/killersheep' " :KillKillKill starts a fun game
+Plugin 'https://github.com/lfilho/cosco.vim' " <leader>; to add ;/,
 
 call vundle#end()
 
@@ -174,9 +197,22 @@ set colorcolumn=80
 set mouse=a
 set splitright
 set splitbelow
+set ignorecase " case insensitive searching (specify lower with \c)
+set smartcase " if upper case in string, case sensitive
+hi clear SignColumn " For syntastic
 
-" For syntastic
-hi clear SignColumn
+" --- File Specific Settings ---
+au BufRead,BufNewFile *.json set filetype=json
+
+" --- Relative Line Numbers ---
+set rnu
+function! ToggleRelativeOn()
+    set rnu!
+endfunction
+autocmd FocusLost * call ToggleRelativeOn()
+autocmd FocusGained * call ToggleRelativeOn()
+autocmd InsertEnter * call ToggleRelativeOn()
+autocmd InsertLeave * call ToggleRelativeOn()
 
 " -------- Plugin-Specific Settings -----------
 
@@ -184,7 +220,7 @@ hi clear SignColumn
 " Always show status bar
 set laststatus=2
 
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
 let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='solarized'
@@ -213,8 +249,8 @@ let g:tmuxline_preset={
 	\'y' : '#W',
 	\'z' : ''}
 
-let g:airline#extensions#tmuxline#enabled=0
-let g:tmuxline_theme='iceberg'
+let g:tmuxline_powerline_separators = 1
+let g:airline#extensions#tmuxline#enabled=1
 let airline#extensions#tmuxline#snapshot_file="./.tmux-status.conf"
 
 " --- Nerdtree ---
@@ -236,8 +272,6 @@ set statusline+=%*
 
 let g:syntastic_cpp_compiler = 'g++-9'
 let g:syntastic_cpp_compiler_options = ' -std=c++17'
-
-au BufRead,BufNewFile *.json set filetype=json
 
 " close location list with :lclose
 let g:syntastic_always_populate_loc_list = 1
