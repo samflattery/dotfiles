@@ -203,16 +203,17 @@ hi clear SignColumn " For syntastic
 
 " --- File Specific Settings ---
 au BufRead,BufNewFile *.json set filetype=json
+autocmd FileType why3 setlocal commentstring=(*%s*)
 
 " --- Relative Line Numbers ---
-set rnu
-function! ToggleRelativeOn()
-    set rnu!
-endfunction
-autocmd FocusLost * call ToggleRelativeOn()
-autocmd FocusGained * call ToggleRelativeOn()
-autocmd InsertEnter * call ToggleRelativeOn()
-autocmd InsertLeave * call ToggleRelativeOn()
+" set rnu
+" function! ToggleRelativeOn()
+"     set rnu!
+" endfunction
+" autocmd FocusLost * call ToggleRelativeOn()
+" autocmd FocusGained * call ToggleRelativeOn()
+" autocmd InsertEnter * call ToggleRelativeOn()
+" autocmd InsertLeave * call ToggleRelativeOn()
 
 " -------- Plugin-Specific Settings -----------
 
