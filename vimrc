@@ -250,9 +250,9 @@ let g:tmuxline_preset={
 	\'y' : '#W',
 	\'z' : ''}
 
-let g:tmuxline_powerline_separators = 1
-let g:airline#extensions#tmuxline#enabled=1
-let airline#extensions#tmuxline#snapshot_file="./.tmux-status.conf"
+let g:tmuxline_powerline_separators=1
+let g:airline#extensions#tmuxline#enabled=0
+" let airline#extensions#tmuxline#snapshot_file="~/dotfiles/tmux-status.conf"
 
 " --- Nerdtree ---
 " open and close with \t
@@ -344,7 +344,7 @@ augroup vimbettersml
   au FileType tex setlocal conceallevel=0 " turn it off for latex documents
   " Uncomment to try out same-width conceal characters
   let g:sml_greek_tyvar_show_tick = 1
-  let g:sml_auto_create_def_use = 'never'
+  let g:sml_auto_create_def_use = 'always'
 augroup END
 
 " --- easymotion ---

@@ -85,6 +85,12 @@ alias spp="spotify play"
 alias sps="spotify status"
 alias sppp="spotify pause"
 
+# tmux stuff
+function tat { # attach to session
+	tmux attach -t "$@"
+}
+alias tls="tmux ls"
+
 # random stuff
 alias wttr="curl 'wttr.in?format=3'" # get the current weather
 alias tmux="tmux -2" # for better colors
