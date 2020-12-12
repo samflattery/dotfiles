@@ -181,6 +181,13 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
+
+" 2 spaces in C/C++ files
+autocmd Filetype cpp,c setlocal expandtab
+autocmd Filetype cpp,c setlocal tabstop=2
+autocmd Filetype cpp,c setlocal softtabstop=2
+autocmd Filetype cpp,c setlocal shiftwidth=2
+
 autocmd Filetype sml setlocal expandtab
 autocmd Filetype why3 setlocal expandtab
 
@@ -194,6 +201,9 @@ set incsearch
 set hlsearch " :nohl to un-highlight
 set clipboard=unnamed
 set colorcolumn=80
+
+autocmd Filetype cpp,c setlocal colorcolumn=100
+
 set mouse=a
 set splitright
 set splitbelow
@@ -265,13 +275,14 @@ let g:syntastic_warning_symbol='▲'
 augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode='passive'
+  au FileType cpp let b:syntastic_mode='passive'
 augroup end
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_cpp_compiler = 'g++-9'
+let g:syntastic_cpp_compiler = 'g++-10'
 let g:syntastic_cpp_compiler_options = ' -std=c++17'
 
 " close location list with :lclose
@@ -279,6 +290,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exe = 'python3'
 " press \s to not automatically check for errors
 nnoremap <Leader>s :SyntasticToggleMode<CR>
 
@@ -295,7 +307,7 @@ let g:easytags_suppress_ctags_warning = 1
 " --- Tagbar ---
 " Open/close tagbar with \a
 nmap <silent> <leader>a :TagbarToggle<CR>
-autocmd FileType c,cpp nested :TagbarOpen " open tagbar automatically for C
+" autocmd FileType c,cpp nested :TagbarOpen " open tagbar automatically for C
 
 " don't sort the tagbar by name, but by location in file
 let g:tagbar_sort = 0

@@ -30,6 +30,7 @@ prompt pure
 export PATH="$PATH:$HOME/.vim/bundle/vim-superman/bin"
 export PATH="$HOME/bin/mlton-install/bin:$PATH"
 export PATH="$HOME/test/mlton-install/bin:$PATH"
+export PATH="$PATH:$HOME/Library/Python/3.8/bin"
 compdef vman="man"
 
 # SMLNJ

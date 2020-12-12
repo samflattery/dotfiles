@@ -106,7 +106,7 @@ alias path="echo $PATH | tr -s ':' '\n'" # pretty print path
 alias soz="source ~/.zshrc"
 
 if [[ "$(uname)" == "Darwin" ]]; then
-	alias find="mdfind" # better find for mac
+	# alias find="mdfind" # better find for mac
 	alias time='gtime -f "%U user, %S system, %e real, %MkB mem -- %C"'
 	alias decomp='~/dev/util/retdec/bin/retdec-decompiler.py'
 fi
@@ -114,3 +114,7 @@ fi
 # remove auto generated files
 alias rmswp='rm .*.swp'
 alias rmtag='rm tags:'
+
+# youtube-dl
+alias dlaudio="youtube-dl -x --audio-format mp3 --no-mtime -o '~/Music/youtube-dl/%(title)s.%(ext)s'"
+alias dlvideo="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]' --no-mtime -o '~/Desktop/%(title)s.%(ext)s'"
