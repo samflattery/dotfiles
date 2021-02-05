@@ -159,6 +159,7 @@ Plugin 'terryma/vim-multiple-cursors'
 
 " --- Miscellaneous ---
 Plugin 'jez/vim-superman' " view man pages in vim
+Plugin 'jez/vim-ispc' " highlight ispc files
 Plugin 'vim/killersheep' " :KillKillKill starts a fun game
 Plugin 'https://github.com/lfilho/cosco.vim' " <leader>; to add ;/,
 
@@ -180,7 +181,6 @@ filetype plugin indent on
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
 
 " 2 spaces in C/C++ files
 autocmd Filetype cpp,c setlocal expandtab
@@ -213,6 +213,8 @@ hi clear SignColumn " For syntastic
 
 " --- File Specific Settings ---
 au BufRead,BufNewFile *.json set filetype=json
+au BufRead,BufNewFile *.inl set filetype=cpp
+au BufRead,BufNewFile *.cu_inl set filetype=cpp
 autocmd FileType why3 setlocal commentstring=(*%s*)
 
 " --- Relative Line Numbers ---

@@ -21,6 +21,14 @@ source $HOME/dotfiles/keybindings.sh
 # Source shell scripts
 export PATH="$PATH:$HOME/dotfiles/scripts"
 
+# 418-Specific Libraries
+export PATH="/usr/local/depot/ispc-v1.9.1-linux/:$PATH"
+export PATH="/usr/local/depot/cuda/bin/:$PATH"
+export LD_LIBRARY_PATH="/usr/local/depot/cuda/lib64:$LD_LIBRARY_PATH"
+
+# 440
+export LD_LIBRARY_PATH="~/private/15440/p1/lib:$LD_LIBRARY_PATH"
+
 # Setup pure prompt
 fpath+=("$HOME/dotfiles/pure")
 autoload -U promptinit; promptinit
