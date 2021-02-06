@@ -162,6 +162,7 @@ Plugin 'jez/vim-superman' " view man pages in vim
 Plugin 'jez/vim-ispc' " highlight ispc files
 Plugin 'vim/killersheep' " :KillKillKill starts a fun game
 Plugin 'https://github.com/lfilho/cosco.vim' " <leader>; to add ;/,
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 
@@ -278,6 +279,7 @@ augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode='passive'
   au FileType cpp let b:syntastic_mode='passive'
+  au FileType python let b:syntastic_mode='passive'
 augroup end
 
 set statusline+=%#warningmsg#
