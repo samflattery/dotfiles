@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # ZSH_THEME="agnoster"
 
-plugins=(git zsh-autosuggestions z zsh-syntax-highlighting osx)
+plugins=(git zsh-autosuggestions z zsh-syntax-highlighting macos)
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -33,6 +33,10 @@ export LD_LIBRARY_PATH="~/private/15440/p1/lib:$LD_LIBRARY_PATH"
 fpath+=("$HOME/dotfiles/pure")
 autoload -U promptinit; promptinit
 prompt pure
+RPROMPT='%{$fg[yellow]%}[%T]'
+# RPROMPT="[%D{%f/%m/%y} | %D{%H:%M:%S}]"
+# RPROMPT="%{$fg[yellow]%}[%D{%f/%m/%y} | %D{%H:%M:%S}]"
+
 
 # Tab completion for vman
 export PATH="$PATH:$HOME/.vim/bundle/vim-superman/bin"
@@ -48,4 +52,5 @@ export PATH=/usr/local/smlnj/bin:"$PATH"
 source ~/dotfiles/aliases.sh
 
 # Fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)

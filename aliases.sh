@@ -8,6 +8,12 @@ alias cdd="cdl .."
 alias cddd="cdl ../.."
 alias cdddd="cdl ../../.."
 alias cddddd="cdl ../../../.."
+alias cdddddd="cdl ../../../../.."
+alias cddddddd="cdl ../../../../../.."
+alias cdddddddd="cdl ../../../../../../.."
+alias cddddddddd="cdl ../../../../../../../.."
+alias cdddddddddd="cdl ../../../../../../../../.."
+alias cddddddddddd="cdl ../../../../../../../../../.."
 
 # easily access files
 alias vimrc="vim ~/dotfiles/vimrc"
