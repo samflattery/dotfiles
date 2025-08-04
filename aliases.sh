@@ -125,3 +125,5 @@ alias rmtag='rm tags:'
 alias dlaudio="youtube-dl -x --audio-format mp3 --no-mtime -o '~/Music/youtube-dl/%(title)s.%(ext)s'"
 alias dlvideo="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]' --no-mtime -o '~/Desktop/%(title)s.%(ext)s'"
 alias 440='ls /afs/andrew/course/15/440/classnotes'
+
+alias expostart="npx expo start"

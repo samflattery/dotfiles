@@ -30,7 +30,7 @@ export LD_LIBRARY_PATH="/usr/local/depot/cuda/lib64:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="~/private/15440/p1/lib:$LD_LIBRARY_PATH"
 
 # Setup pure prompt
-fpath+=("$HOME/dotfiles/pure")
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 RPROMPT='%{$fg[yellow]%}[%T]'
@@ -54,3 +54,8 @@ source ~/dotfiles/aliases.sh
 # Fzf
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source <(fzf --zsh)
+
+# nvm support
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
